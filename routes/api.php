@@ -15,7 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/uer', function (Request $request) {
-        return $request->user();
-    });
+    Route::get('/user', 'AppController@user')->name('user');
+
+    Route::resource('/departments', 'DepartmentController', [
+        'except' => ['create', 'show', 'edit']
+    ]);
+
+    Route::resource('/employees', 'EmployeeController', [
+        'except' => ['create', 'show', 'edit']
+    ]);
 });
