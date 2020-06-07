@@ -11,6 +11,8 @@ class DepartmentSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(App\Department::class, 5)->create()->each(function($department) {
+            $department->employees()->saveMany(factory(App\Employee::class, 3)->make());
+        });
     }
 }

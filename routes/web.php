@@ -20,4 +20,4 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes(['register' => false]);
 
 Route::get('/', 'PublicController@index')->name('welcome');
-Route::get('/app/', 'AppController@index')->name('dashboard');
+Route::get('/app', 'AppController@index')->name('dashboard')->middleware('auth');

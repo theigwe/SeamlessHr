@@ -24,7 +24,8 @@ class DepartmentRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|alpha_dash|max:100',
+            'description' => 'required|string|max:200'
         ];
     }
 }
