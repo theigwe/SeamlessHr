@@ -38,7 +38,6 @@ const responseInterceptor = response => {
 
 const client = axios.create({
   baseURL: `${window.location.origin}`,
-  timeout: 500,
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json"
