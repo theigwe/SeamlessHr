@@ -76,7 +76,7 @@
                     @else
                         <a href="{{ route('login') }}">ADMIN LOGIN</a>
                     @endauth
-                    <a href="https://github.com/laravel/laravel">VIEW ON GITHUB</a>
+                    <a href="https://github.com/sammyni/SeamlessHr" target="_blank">VIEW ON GITHUB</a>
                 </div>
             </div>
         </div>
