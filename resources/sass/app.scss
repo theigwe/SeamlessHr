@@ -1,3 +1,32 @@
 #app {
-    min-height: 100vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-right: 10vw;
+    padding-left: 10vw;
+    color: #6a7075;
+    background-color: #b6b3b3;
+
+    #wrapper {
+        min-height: 80vh;
+        max-width: 80vw;
+        background-color: #d2d5d8;
+
+        &, header nav {
+            border-radius: 1.5rem;
+        }
+    }
+
+    .shadow {
+        box-shadow: 0 4px 10px 0 rgba($color: #ffffff, $alpha: 0.2),
+          0 4px 20px 0 rgba($color: #ffffff, $alpha: 0.19);
+      }
+
+    @media screen and (max-width: 768px) {
+        padding: 0!important;
+        #wrapper {
+            min-width: 100vw;
+            min-height: 100vh;
+            border-radius: 0 !important;
+        }
+    }
 }

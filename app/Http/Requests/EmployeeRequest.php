@@ -25,8 +25,8 @@ class EmployeeRequest extends FormRequest
     public function rules()
     {
         return [
-            'department_id' => 'required|integer|exists:departments',
-            'full_name' => 'required|string|max:100|regex:/^[^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$',
+            'department_id' => 'required|integer|exists:departments,id',
+            'full_name' => 'required|string|max:100|min:3',
             'role' => 'required|string|min:3|max:100',
             'employment_date' => 'required|date',
             'staff_type' => [
@@ -37,11 +37,11 @@ class EmployeeRequest extends FormRequest
                 'required',
                 Rule::in(['probation', 'sacked', 'dismissed', 'worker'])
             ],
-            'staff_type' => [
+            'salary_currency' => [
                 'nullable',
                 Rule::in(['NGN', 'USD'])
             ],
-            'salary' => 'required|nullable'
+            'salary' => 'required|numeric'
         ];
     }
 }

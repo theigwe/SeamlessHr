@@ -30,7 +30,7 @@ class DepartmentController extends Controller
      */
     public function store(DepartmentRequest $request)
     {
-        $validated = $request->validate();
+        $validated = $request->validated();
 
         try {
             $department = Department::create($validated);
@@ -63,7 +63,7 @@ class DepartmentController extends Controller
     public function update(DepartmentRequest $request, $id)
     {
         $department = Department::findOrFail($id);
-        $validated = $request->validate();
+        $validated = $request->validated();
 
         foreach ($validated as $key => $value) {
             $department->{$key}->$value;

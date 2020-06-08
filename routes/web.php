@@ -21,3 +21,7 @@ Auth::routes(['register' => false]);
 
 Route::get('/', 'PublicController@index')->name('welcome');
 Route::get('/app', 'AppController@index')->name('dashboard')->middleware('auth');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/user', 'AppController@user')->name('user');
+});

@@ -30,7 +30,7 @@ class EmployeeController extends Controller
      */
     public function store(EmployeeRequest $request)
     {
-        $validated = $request->validate();
+        $validated = $request->validated();
 
         try {
             $employee = Employee::create($validated);
@@ -62,14 +62,10 @@ class EmployeeController extends Controller
     public function update(EmployeeRequest $request, $id)
     {
         $employee = Employee::findOrFail($id);
-        $validated = $request->validate();
-
-        foreach ($validated as $key => $value) {
-            $employee->{$key}->$value;
-        }
+        $validated = $request->validated();
 
         try {
-            $employee->save();
+            $employee->update($validated);
             return response()->json(new EmployeeResource($employee), Response::HTTP_OK);
         } catch (\Throwable $th) {
             return response()->json(null, Response::HTTP_BAD_REQUEST);
