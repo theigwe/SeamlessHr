@@ -81,54 +81,30 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
+/***/ "./resources/js/auth.js":
+/*!******************************!*\
+  !*** ./resources/js/auth.js ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/media/sammy/Local/projects2/jobs/SeamlessHr/resources/js/auth.js'");
 
 /***/ }),
 
-/***/ "./resources/sass/auth.scss":
-/*!**********************************!*\
-  !*** ./resources/sass/auth.scss ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nError: ENOENT: no such file or directory, open '/media/sammy/Local/projects2/jobs/SeamlessHr/resources/sass/auth.scss'\n    at runLoaders (/media/sammy/Local/projects2/jobs/SeamlessHr/node_modules/webpack/lib/NormalModule.js:316:20)\n    at /media/sammy/Local/projects2/jobs/SeamlessHr/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /media/sammy/Local/projects2/jobs/SeamlessHr/node_modules/loader-runner/lib/LoaderRunner.js:203:19\n    at process.nextTick (/media/sammy/Local/projects2/jobs/SeamlessHr/node_modules/webpack/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:85:15)\n    at process._tickCallback (internal/process/next_tick.js:61:11)");
-
-/***/ }),
-
-/***/ "./resources/ui/app.js":
-/*!*****************************!*\
-  !*** ./resources/ui/app.js ***!
-  \*****************************/
-/*! no exports provided */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/media/sammy/Local/projects2/jobs/SeamlessHr/resources/ui/app.js'");
-
-/***/ }),
-
-/***/ 0:
-/*!****************************************************************************************!*\
-  !*** multi ./resources/ui/app.js ./resources/sass/app.scss ./resources/sass/auth.scss ***!
-  \****************************************************************************************/
+/***/ 1:
+/*!************************************!*\
+  !*** multi ./resources/js/auth.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /media/sammy/Local/projects2/jobs/SeamlessHr/resources/ui/app.js */"./resources/ui/app.js");
-__webpack_require__(/*! /media/sammy/Local/projects2/jobs/SeamlessHr/resources/sass/app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! /media/sammy/Local/projects2/jobs/SeamlessHr/resources/sass/auth.scss */"./resources/sass/auth.scss");
+module.exports = __webpack_require__(/*! /media/sammy/Local/projects2/jobs/SeamlessHr/resources/js/auth.js */"./resources/js/auth.js");
 
 
 /***/ })
