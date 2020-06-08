@@ -64,13 +64,8 @@ class DepartmentController extends Controller
     {
         $department = Department::findOrFail($id);
         $validated = $request->validated();
-
-        foreach ($validated as $key => $value) {
-            $department->{$key}->$value;
-        }
-
         try {
-            $department->save();
+            $department->update( $validated);
             return response()->json(new DepartmentResource($department), Response::HTTP_OK);
         } catch (\Throwable $th) {
             return response()->json(null, Response::HTTP_BAD_REQUEST);
