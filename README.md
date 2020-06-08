@@ -34,7 +34,7 @@ $ yarn install
 
 > #### Update environment variables
 ```
-$ cp .env.example .env.example
+$ cp .env.example .env
 ```
 
 > Update the following value with your environment values in **.env** file
